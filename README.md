@@ -1,12 +1,8 @@
 ### WeiboScraper：一个高效的微博话题数据爬取工具
 
----
-
 ## 简介
 
 **WeiboScraper** 是一个高效的微博话题爬取工具，可以帮助您从微博移动版网站获取话题的相关数据（如阅读量、讨论量、互动量和原创量）。它使用了 **Selenium** 和 **BeautifulSoup** 进行页面解析，并通过多线程加速数据抓取，适用于处理大量话题的场景。
-
----
 
 ## 功能特性
 
@@ -15,8 +11,6 @@
 - **多线程支持**：利用 `ThreadPoolExecutor` 实现并发爬取，提升处理效率。
 - **数据保存**：将爬取结果导出为 CSV 文件，便于进一步分析。
 - **日志记录**：全程记录爬取日志，方便调试和问题追踪。
-
----
 
 ## 环境依赖
 
@@ -35,8 +29,6 @@
 ```bash
 pip install selenium beautifulsoup4 pandas tqdm
 ```
-
----
 
 ## 安装与配置
 
@@ -69,8 +61,6 @@ pip install selenium beautifulsoup4 pandas tqdm
    ```
    注意，请确保首行的名称是：话题
 
----
-
 ## 使用方法
 
 ### 运行主程序
@@ -95,8 +85,6 @@ python3 weibo_scraper.py
 ### 日志记录
 
 运行过程中，程序会将日志记录在 `scraper.log` 文件中，并实时输出到控制台，便于调试。
-
----
 
 ## 代码结构说明
 
@@ -123,8 +111,6 @@ python3 weibo_scraper.py
 4. **主函数**：
    - 负责加载话题列表，调用爬虫获取数据，并将结果保存为 CSV 文件。
 
----
-
 ## 配置选项
 
 在 `WeiboScraper` 类中，您可以通过以下参数调整爬虫行为：
@@ -137,8 +123,6 @@ python3 weibo_scraper.py
 ```python
 scraper = WeiboScraper(headless=False, timeout=15)
 ```
-
----
 
 ## 注意事项
 
@@ -153,8 +137,6 @@ scraper = WeiboScraper(headless=False, timeout=15)
 
 3. **浏览器版本匹配**：
    - ChromeDriver 版本必须与 Chrome 浏览器保持一致，否则可能导致程序无法正常运行。
-
----
 
 ## 常见问题
 
@@ -175,8 +157,6 @@ scraper = WeiboScraper(headless=False, timeout=15)
   df = scrape_topics(topics, max_workers=10)
   ```
 
----
-
 ## 项目展望
 
 未来版本可能增加以下功能：
@@ -184,8 +164,6 @@ scraper = WeiboScraper(headless=False, timeout=15)
 - 支持更多数据字段的爬取。
 - 添加自动重试机制，进一步提高稳定性。
 - 提供 Web 界面，便于非技术用户使用。
-
----
 
 ## 开源协议
 
